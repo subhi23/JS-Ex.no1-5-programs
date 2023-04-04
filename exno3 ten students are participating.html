@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+    <title>Searching the Winner</title>
+</head>
+<body>
+    <h2>Searching and Bringing the Winner first in the list without Disturbing the  order using JS</h2>
+<script>
+
+
+    let students = ['Sriram', 'Mishal', 'Charlie', 'Gokul', 'Jimny', 'Frank', 'Grace', 'Kali', 'Parrot', 'John'];
+let winner = 'Jimny';
+
+for(let i=0; i<students.length; i++){
+  if(students[i] === winner){
+    for(let j=i; j>0; j--){
+      students[j] = students[j-1];
+    }
+    students[0] = winner;
+    break;
+  }
+}
+
+document.write(students);
+    </script>
+</boody>
+</html>

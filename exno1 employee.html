@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+    <title>Sort Employee IDs in Ascending Order</title>
+</head>
+<body>
+    <h1>Sort Employee IDs in Ascending Order</h1>
+<script>
+    
+let employeeIds = [];
+
+for (let i = 0; i < 10; i++) {
+  let id = prompt("Enter employee ID:");
+  employeeIds[i] = parseInt(id);
+}
+
+let len = employeeIds.length;
+for (let i = 0; i < len-1; i++) {
+  for (let j = 0; j < len-i-1; j++) {
+    if (employeeIds[j] > employeeIds[j+1]) {
+      let temp = employeeIds[j];
+      employeeIds[j] = employeeIds[j+1];
+      employeeIds[j+1] = temp;
+    }
+  }
+}
+
+document.write("Sorted employee IDs:");
+document.write("<br />");
+for (let i = 0; i < len; i++) {
+    
+    document.write(employeeIds[i]+ "<br>");
+}
+
+    </script>
+</body>
+</html>

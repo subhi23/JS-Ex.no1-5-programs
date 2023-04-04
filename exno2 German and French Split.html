@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<head>
+    <title>Splitting Students based on Language using Array</title>
+</head>
+<body>
+    <h1>Splitting Students based on Language(German or French) using Array</h1>
+<script>
+const students = [
+  'Not Selected',
+  'French1',
+  'German1',
+  'French2',
+  'German2',
+  'French3',
+  'German3',
+  'French4',
+  'German4',
+  'French5',
+  'German5',
+  'French6',
+  'German6',
+  'French7',
+  'German7',
+  'French8',
+  'German8',
+  'French9',
+  'German9',
+  'French10',
+  'German10',
+  'French11',
+  'German11',
+  'French12',
+  'German12',
+  'French13',
+  'German13',
+  'French14',
+  'German14',
+  'French15',
+  'German15',
+  'French16',
+  'German16',
+  'French17',
+  'German17',
+  'French18',
+  'German18',
+  'French19',
+  'German19',
+  'French20',
+  'German20',
+  'French21',
+  'German21',
+  'French22',
+  'German22',
+  'French23',
+  'German23',
+  'French24',
+  'German24',
+  'French25',
+];
+
+const frenchStudents = [];
+const germanStudents = [];
+let notSelectedStudentId;
+
+for (let i = 0; i < students.length; i++) {
+  if (i === 0) {
+    notSelectedStudentId = i;
+  } else if (i % 2 === 1) {
+    frenchStudents[(i - 1) / 2] = i;
+  } else {
+    germanStudents[i / 2 - 1] = i;
+  }
+}
+document.write("<br />");
+document.write('French Students: ', frenchStudents);
+document.write("<br />");
+document.write('German Students: ', germanStudents);
+document.write("<br />");
+document.write('Not Selected Student ID: ', notSelectedStudentId);    
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head>
+    <title> Deleting the odd in Array list </title>
+</head>
+<body>
+    <h2>Deleting the odd in Array list</h2>
+    <script>
+const arr = [20, 30, 53, 40, 50, 57, 60, 70, 80, 90];
+
+let evenIndex = 0;
+for (let i = 0; i < arr.length; i++) {
+  if (arr[i] % 2 === 0) {
+    arr[evenIndex] = arr[i];
+    evenIndex++;
+  }
+}
+
+arr.length = evenIndex;
+
+document.write(arr);
+</script>
+
+</body>
+</html>

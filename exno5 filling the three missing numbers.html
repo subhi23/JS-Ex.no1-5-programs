@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+    <title>Filling the Three Missing Number</title>
+</head>
+<body>
+    <h1>Filling the Three Missing Number in Array list</h1>
+<script>
+let arr = [10,30,40,60,70,80,100,110];
+let missingNums = [20, 50, 90];
+
+for(let i=0; i<missingNums.length; i++){
+  let j = 0;
+  while(j < arr.length && arr[j] < missingNums[i]){
+    j++;
+  }
+  for(let k=arr.length-1; k>=j; k--){
+    arr[k+1] = arr[k];
+  }
+  arr[j] = missingNums[i];
+}
+
+document.write(arr);
+
+</script>
+</body>    
+</html>
